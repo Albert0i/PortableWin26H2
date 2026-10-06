@@ -20,5 +20,9 @@
 
 #### Epilogue 
 
+A: What is the *biggest* legacy app in your computer? 
+
+B: Windows itself... i think. 
+
 
 #### EOF (2026/10/30)
