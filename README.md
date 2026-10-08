@@ -44,6 +44,42 @@ Note: This WIM version is NOT compatible with Windows To Go.
 
 
 #### II. 
+![alt RUFUS-00](img/RUFUS-00.JPG)
+
+![alt RUFUS-01](img/RUFUS-01.JPG)
+
+![alt RUFUS-02](img/RUFUS-02.JPG)
+
+![alt RUFUS-03](img/RUFUS-03.JPG)
+
+![alt RUFUS-04](img/RUFUS-04.JPG)
+
+
+![alt UpdateDriver-01](img/UpdateDriver-01.JPG)
+
+![alt UpdateDriver-02](img/UpdateDriver-02.JPG)
+
+![alt UpdateDriver-03](img/UpdateDriver-03.JPG)
+
+![alt UpdateDriver-04](img/UpdateDriver-04.JPG)
+
+![alt UpdateDriver-05](img/UpdateDriver-05.JPG)
+
+![alt UpdateDriver-06](img/UpdateDriver-06.JPG)
+
+
+![alt 26H2](img/26H2.JPG)
+
+![alt 26H2-Disk](img/26H2-Disk.JPG)
+
+![alt 26H2-Desktop](img/26H2-Desktop.JPG)
+
+
+![alt Copilot_20260930_144941](img/Copilot_20260930_144941.png)
+
+![alt Copilot_20260930_145209.png](img/Copilot_20260930_145209.png)
+
+![alt Copilot_20260930_150928.png](img/Copilot_20260930_150928.png)
 
 
 #### III. Bibliography 
