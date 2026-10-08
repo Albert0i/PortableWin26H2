@@ -13,7 +13,7 @@ In the year of 2026, I move to [Zorin OS](https://zorin.com/os/). The reason is 
 1. [Wine](https://www.winehq.org/) + [Bottles](https://usebottles.com/) 
 2. [WinBoat](https://winboat.app/) or [WinPodX](https://www.winpodx.org/) 
 3. [Virtual Box](https://www.virtualbox.org/)
-4. The idea of installing Windows on USB drive appeared since Windows XP, most of the artifacts were based on [WinPE](https://en.wikipedia.org/wiki/Windows_Preinstallation_Environment) which is a highly customized tools not for eaily use. 
+4. Install Windows on USB drive - it first appeared since Windows XP, most of the artifacts were based on [WinPE](https://en.wikipedia.org/wiki/Windows_Preinstallation_Environment) which is a highly customized tools not designed for eaily use. 
 
 
 #### I. TL;DR
