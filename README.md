@@ -55,9 +55,9 @@ Note: This WIM version is NOT compatible with Windows To Go.
 #### II. Action Plan
 To begin with, you need to download Windows 11 26H2 .iso and `rufus.exe`. Next run `rufus.exe` in Administrator. 
 
-![alt RUFUS-00](img/RUFUS-00.JPG)
-
 ![alt RUFUS-01](img/RUFUS-01.JPG)
+
+Click `START`.
 
 ![alt RUFUS-02](img/RUFUS-02.JPG)
 
@@ -65,6 +65,7 @@ To begin with, you need to download Windows 11 26H2 .iso and `rufus.exe`. Next r
 
 ![alt RUFUS-04](img/RUFUS-04.JPG)
 
+Wait until finished. Restart computer and press `Esc` to enter boot menu and choose to boot from USB drive. Windows will starts as it is the first time to power on, just wait and follow on-screen instructions to finish setup. 
 
 ![alt UpdateDriver-01](img/UpdateDriver-01.JPG)
 
