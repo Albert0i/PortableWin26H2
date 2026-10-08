@@ -65,7 +65,7 @@ Click `START`.
 
 ![alt RUFUS-04](img/RUFUS-04.JPG)
 
-Wait until finished. Restart computer and press `Esc` to enter boot menu and choose to boot from USB drive. Windows will starts as it is the first time to power on, just wait and follow on-screen instructions to finish setup. 
+Wait until finished. Restart computer and press `Esc` to enter boot menu, choose to boot from USB drive. Windows will starts as it is powered on for the first time, just wait and follow on-screen instructions to finish setup. 
 
 ![alt UpdateDriver-01](img/UpdateDriver-01.JPG)
 
