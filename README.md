@@ -6,6 +6,15 @@ someone. It’s our own concept – our own selves – that we love"<br /><br />
 
 
 #### Prologue
+In the year of 2026, I move to [Zorin OS](https://zorin.com/os/). The reason is simple: the operating system i rely on for more than two decades becomes *untrustworthy*. `Stay` or `Leave` is always a forever dilemma, both have pros and cons and I opt out... 
+
+"Everyone has their own Brokeback Mountain" and do do legacy apps... To be able to run them in Linux environment, there are: 
+
+1. [Wine](https://www.winehq.org/) + [Bottles](https://usebottles.com/) 
+2. [WinBoat](https://winboat.app/) or [WinPodX](https://www.winpodx.org/) 
+2. [Virtual Box](https://www.virtualbox.org/)
+
+The idea of installing Windows on USB drive appeared since Windows XP, most of the the artifacts are based on [WinPE](https://en.wikipedia.org/wiki/Windows_Preinstallation_Environment) which is a highly customized tools not for eaily use. 
 
 
 #### I. TL;DR
