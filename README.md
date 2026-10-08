@@ -96,6 +96,10 @@ Wait until finished. Restart computer and press `Esc` to enter boot menu, choose
 ![alt Copilot_20260930_150928.png](img/Copilot_20260930_150928.png)
 
 
+[ASUS Cobble SSD Enclosure｜Data Storage](https://www.asus.com/motherboards-components/data-storage/asus-product/asus-cobble-ssd-enclosure/) 
+NVMe M.2 SSD of 512G 
+
+
 #### III. Bibliography 
 1. [Rufus](https://rufus.ie/en/)
 2. [Open-Shell](https://github.com/Open-Shell/Open-Shell-Menu)
