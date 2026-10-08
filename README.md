@@ -1,5 +1,9 @@
 ### PortableWin26H2 <br />── The last exodus of legacy apps 
 
+> "We never love anyone. What we love is the idea we have of
+someone. It’s our own concept – our own selves – that we love"<br /><br />"Nunca amamos alguém. Amamos, tão-somente, a ideia que fazemos de alguém. É um conceito nosso — em suma, é a nós mesmos — que amamos."
+<br/>--- The Book of Disquiet by Fernando Pessoa
+
 
 #### Prologue
 
