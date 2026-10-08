@@ -1,10 +1,28 @@
 ### PortableWin26H2 <br />── The last exodus of legacy apps 
 
 
-#### Prologue 
+#### Prologue
 
 
 #### I. 
+> [Windows To Go>](https://en.wikipedia.org/wiki/Windows_To_Go) was a feature in Windows 8 Enterprise, Windows 8.1 Enterprise, Windows 10 Education, and Windows 10 Enterprise versions up to the November 2019 update, that allows the system to boot and run from certain USB mass storage devices such as USB flash drives and external hard disk drives which have been certified by Microsoft as compatible. It is a fully manageable corporate Windows environment. The development of Windows To Go was discontinued by Microsoft in 2019, and is no longer available in Windows 10 as of the May 2020 update (version 2004).
+
+> It was intended to allow enterprise administrators to provide users with an imaged version of Windows that reflects the corporate desktop. Although creation of Windows To Go drives was not officially supported by non-Enterprise (or Education) editions of Windows 8.x and 10, some information has been published describing various ways to install Windows To Go using any edition of Windows 8.x and 10 and any bootable USB device.
+
+> After the release of the May 2019 update (version 1903) for Windows 10, Microsoft announced that Windows To Go was no longer being developed. Microsoft stated in its discontinuation statement that "WTG does not support feature updates. Therefore, it does not enable you to stay current. Additionally, WTG requires a specific type of USB drive that many OEMs no longer support." Windows To Go has been removed in Windows 10 starting with the May 2020 update (version 2004).
+
+[**Why is the Windows To Go media creation process so slow?**](https://github.com/pbatard/rufus/wiki/FAQ#user-content-Why_is_the_Windows_To_Go_media_creation_process_so_slow)
+
+> It simply means that your media is **not** suited to run Windows To Go. You will need to go purchase an SSD-based USB drive, that has a **random access write** speed (rather than a sequential access write speed, which is what manufacturers usually advertises) that is actually high enough to run Windows. There is **no** alternative to getting a better suited media.
+
+> That is because, creating a Windows To Go drive means the creation of a lot of random small files (as opposed to creating a Windows installation drive, where one mostly need to copy a large sequential file and a relatively low number of small files), and, whereas *a flash drive might report very good write speed, that high write speed might only apply to sequential access and not random file access*, which the WIM extraction that is applied when creating a Windows To Go drive, relies on.
+
+> As a result, even if you have a drive that can allegedly sustain 100 MB/s **sequential write** speeds, the effective maximum write speed the same drive can achieve for writing the kind of small files needed during the creation of a Windows To Go drive could be much much lower, especially with non SSD-based consumer flash drives. *And that speed reflects the speed at which Windows will be able to run from the same drive, since it too will need to read and write lots of small non sequential files at a high enough speed.*
+
+> A decent rule of thumb is as follows: *If your Windows To Go creation process takes more than 20 minutes, then it means that the media you are trying to use is ill-suited to actually run Windows.* There is no workaround, besides using a media with faster random I/O speed.
+
+> The one thing we know of that **may** help speed up the creation of a Windows To Go drive, is to temporarily disable your Anti Virus. But you shouldn't expect a dramatic speed improvement out of it when the underlying issue is that your drive's effective random write speed is way too low to run Windows in the first place.
+
 
 
 #### II. 
