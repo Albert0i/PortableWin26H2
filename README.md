@@ -27,7 +27,14 @@ someone. It’s our own concept – our own selves – that we love"<br /><br />
 
 > The one thing we know of that **may** help speed up the creation of a Windows To Go drive, is to temporarily disable your Anti Virus. But you shouldn't expect a dramatic speed improvement out of it when the underlying issue is that your drive's effective random write speed is way too low to run Windows in the first place.
 
+> To create your Windows To Go drive, you should try to use a version of Windows that it at least the same version as the one of the ISO you are trying to create a To Go drive from. This means that, if you want to create a `Windows 8.1 To Go drive`, you should run Rufus on `Windows 8.1`, `Windows 10`, or a later version of Windows. Trying to create a `Windows 8.1` To Go drive on `Windows 8.0`, for instance, is **unsupported** and will likely result in errors during creation.
 
+> The Windows To Go option may not be available with all Windows images, **especially the ones created with the Windows 10 Media Creation Tool**. This is because Microsoft tools can create ISOs containing an `install.wim` that is incompatible with Microsoft's own WIM extraction APIs (which is what Rufus uses). If that is the case, you will see a line in the log that states:
+```
+Note: This WIM version is NOT compatible with Windows To Go.
+```
+
+> For more technical details on how Windows To Go is currently implemented in Rufus, see [here](https://github.com/pbatard/rufus/wiki/Usage-Notes#Windows_To_Go).
 
 #### II. 
 
