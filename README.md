@@ -52,7 +52,9 @@ Note: This WIM version is NOT compatible with Windows To Go.
 > AI: Yes, you can create a new Windows To Go drive while running from an existing Windows To Go drive. While doing so introduces specific performance, hardware, and software constraints compared to using a standard internal OS.
 
 
-#### II. 
+#### II. Action Plan
+To begin with, you need to download Windows 11 26H2 .iso and `rufus.exe`. Next run `rufus.exe` in Administrator. 
+
 ![alt RUFUS-00](img/RUFUS-00.JPG)
 
 ![alt RUFUS-01](img/RUFUS-01.JPG)
