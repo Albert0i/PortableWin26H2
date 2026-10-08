@@ -38,6 +38,10 @@ Note: This WIM version is NOT compatible with Windows To Go.
 
 > For more technical details on how Windows To Go is currently implemented in Rufus, see [here](https://github.com/pbatard/rufus/wiki/Usage-Notes#Windows_To_Go).
 
+**Can I create a Windows To Go drive using a Windows To Go drive?**
+
+> AI: Yes, you can create a new Windows To Go drive while running from an existing Windows To Go drive. While doing so introduces specific performance, hardware, and software constraints compared to using a standard internal OS.
+
 
 #### II. 
 
