@@ -4,7 +4,7 @@
 #### Prologue
 
 
-#### I. 
+#### I. TL;DR
 > [Windows To Go>](https://en.wikipedia.org/wiki/Windows_To_Go) was a feature in Windows 8 Enterprise, Windows 8.1 Enterprise, Windows 10 Education, and Windows 10 Enterprise versions up to the November 2019 update, that allows the system to boot and run from certain USB mass storage devices such as USB flash drives and external hard disk drives which have been certified by Microsoft as compatible. It is a fully manageable corporate Windows environment. The development of Windows To Go was discontinued by Microsoft in 2019, and is no longer available in Windows 10 as of the May 2020 update (version 2004).
 
 > It was intended to allow enterprise administrators to provide users with an imaged version of Windows that reflects the corporate desktop. Although creation of Windows To Go drives was not officially supported by non-Enterprise (or Education) editions of Windows 8.x and 10, some information has been published describing various ways to install Windows To Go using any edition of Windows 8.x and 10 and any bootable USB device.
