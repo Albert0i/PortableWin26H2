@@ -67,6 +67,8 @@ Click `START`.
 
 Wait until finished. Restart computer and press `Esc` to enter boot menu, choose to boot from USB drive. Windows will starts as it is powered on for the first time, just wait and follow on-screen instructions to finish setup. 
 
+
+
 ![alt UpdateDriver-01](img/UpdateDriver-01.JPG)
 
 ![alt UpdateDriver-02](img/UpdateDriver-02.JPG)
