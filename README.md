@@ -142,7 +142,7 @@ This pretty much concludes all projects of 2026. The original project name is ca
 
 A: What is the *biggest* legacy app in your computer? 
 
-B: **Windows** itself... i think. 
+B: *Windows* itself... i think. 
 
 
 #### EOF (2026/10/30)
