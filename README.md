@@ -119,7 +119,9 @@ Three USB drives have been tested to install:
 
 ![alt Netact](img/40140120-57F8-4126-910C-69A0BE4E75D2.jpeg)
 
-The result is quite disapointing and finally I have to use [ASUS Cobble SSD Enclosure｜Data Storage](https://www.asus.com/motherboards-components/data-storage/asus-product/asus-cobble-ssd-enclosure/) plus a 512G NVMe M.2 SSD.  
+The result is quite disapointing...
+
+ Finally I have to use [ASUS Cobble SSD Enclosure｜Data Storage](https://www.asus.com/motherboards-components/data-storage/asus-product/asus-cobble-ssd-enclosure/) plus a 512G NVMe M.2 SSD.  
 
 
 #### IV. Bibliography 
