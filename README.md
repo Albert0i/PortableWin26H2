@@ -121,7 +121,13 @@ Three USB drives have been tested to install:
 
 The result is quite disapointing...
 
- Finally I have to use [ASUS Cobble SSD Enclosure｜Data Storage](https://www.asus.com/motherboards-components/data-storage/asus-product/asus-cobble-ssd-enclosure/) plus a 512G NVMe M.2 SSD.  
+ Finally I have to use [ASUS Cobble SSD Enclosure｜Data Storage](https://www.asus.com/motherboards-components/data-storage/asus-product/asus-cobble-ssd-enclosure/) plus a 512G NVMe M.2 SSD. 
+
+This pretty much concludes all projects of 2026. The original project name is called `FlashWin26H2` which means to run Windows 11 on a USB Flash Drive.  
+
+![alt FlashWin26H2](img/Copilot_20260930_144703.png)
+
+![alt FlashWin26H2](img/Copilot_20260930_144808.png)
 
 
 #### IV. Bibliography 
@@ -136,7 +142,7 @@ The result is quite disapointing...
 
 A: What is the *biggest* legacy app in your computer? 
 
-B: Windows itself... i think. 
+B: **Windows** itself... i think. 
 
 
 #### EOF (2026/10/30)
