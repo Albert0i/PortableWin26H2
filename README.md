@@ -93,7 +93,7 @@ Check Windows version:
 
 ![alt 26H2](img/26H2.JPG)
 
-Check installation: 
+Check installation media: 
 
 ![alt 26H2-Disk](img/26H2-Disk.JPG)
 
@@ -111,7 +111,7 @@ Three wallpapers created by AI:
 
 
 #### III. Summary 
-Three USB drive have been tested to install: 
+Three USB drives have been tested to install: 
 
 ![alt SanDisk Ultra](img/A132BD70-3EA9-4C50-98C3-3702467F9A28.jpeg)
 
@@ -119,7 +119,7 @@ Three USB drive have been tested to install:
 
 ![alt Netact](img/40140120-57F8-4126-910C-69A0BE4E75D2.jpeg)
 
-The result is quite disapointing and until using [ASUS Cobble SSD Enclosure｜Data Storage](https://www.asus.com/motherboards-components/data-storage/asus-product/asus-cobble-ssd-enclosure/) plus a 512G NVMe M.2 SSD.  
+The result is quite disapointing and finally I have to use [ASUS Cobble SSD Enclosure｜Data Storage](https://www.asus.com/motherboards-components/data-storage/asus-product/asus-cobble-ssd-enclosure/) plus a 512G NVMe M.2 SSD.  
 
 
 #### IV. Bibliography 
