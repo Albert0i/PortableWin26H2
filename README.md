@@ -14,7 +14,7 @@ In the year of 2026, I move to [Zorin OS](https://zorin.com/os/). The reason is 
 2. [WinBoat](https://winboat.app/) or [WinPodX](https://www.winpodx.org/) 
 3. [Virtual Box](https://www.virtualbox.org/)
 
-While using a Dual-Boot System is yet another possible choice. The last option would be booting and running Windows on USB drive, most of them were based on [WinPE](https://en.wikipedia.org/wiki/Windows_Preinstallation_Environment) which is a highly customized tool not designed for eaily use. 
+While using a Dual-Boot System is yet another possible choice. The last option would be booting and running Windows on USB drive, most of the early system were based on [WinPE](https://en.wikipedia.org/wiki/Windows_Preinstallation_Environment) which is a highly customized tool not designed for eaily use. 
 
 
 #### I. TL;DR
@@ -65,13 +65,19 @@ Click `START`.
 
 ![alt RUFUS-04](img/RUFUS-04.JPG)
 
-Wait until finished. Restart computer and press `Esc` to enter boot menu, choose to boot from USB drive. Windows will starts as it is powered on for the first time, just wait and follow on-screen instructions to finish setup. 
+Wait until finished. Restart computer and press `Esc` to enter boot menu, choose to boot from USB drive. Windows will starts as if power on for the first time, just wait and follow on-screen instructions to finish setup. Reboot and a fresh install of Windows 26H2 is At your disposal. 
 
+Notebook computer may suffer from driver issues, in this case you have to download and install them manually. Go and check manufacturer's website, download the corresponding drivers in another computer.   
 
+- [B1402CVA Driver & Tools](https://www.asus.com/supportonly/b1402cva/helpdesk_download/)
+
+Extract and copy into `C:\ASUS_B1402CV_DRIVERS` of USB drive. Open `Device Manager`, right click on device in question and choose `Update Driver` and `Browse my computer for drivers` :
 
 ![alt UpdateDriver-01](img/UpdateDriver-01.JPG)
 
 ![alt UpdateDriver-02](img/UpdateDriver-02.JPG)
+
+Choose the proper driver location and click `Next`: 
 
 ![alt UpdateDriver-03](img/UpdateDriver-03.JPG)
 
@@ -79,15 +85,23 @@ Wait until finished. Restart computer and press `Esc` to enter boot menu, choose
 
 ![alt UpdateDriver-05](img/UpdateDriver-05.JPG)
 
+Repeat until all driver issues are solved. 
+
 ![alt UpdateDriver-06](img/UpdateDriver-06.JPG)
 
+Check Windows version: 
 
 ![alt 26H2](img/26H2.JPG)
 
+Check installation: 
+
 ![alt 26H2-Disk](img/26H2-Disk.JPG)
+
+Install and run apps just like ordinary Windows 11: 
 
 ![alt 26H2-Desktop](img/26H2-Desktop.JPG)
 
+Three wallpapers created by AI: 
 
 ![alt Copilot_20260930_144941](img/Copilot_20260930_144941.png)
 
@@ -96,11 +110,19 @@ Wait until finished. Restart computer and press `Esc` to enter boot menu, choose
 ![alt Copilot_20260930_150928.png](img/Copilot_20260930_150928.png)
 
 
-[ASUS Cobble SSD Enclosure｜Data Storage](https://www.asus.com/motherboards-components/data-storage/asus-product/asus-cobble-ssd-enclosure/) 
-NVMe M.2 SSD of 512G 
+#### III. Summary 
+Three USB drive have been tested to install: 
+
+![alt SanDisk Ultra](img/A132BD70-3EA9-4C50-98C3-3702467F9A28.jpeg)
+
+![alt SanDisk Ultra Luxe.](img/C02BF14C-A34E-4FA5-A9E1-34D8F41866C2.jpeg)
+
+![alt Netact](img/40140120-57F8-4126-910C-69A0BE4E75D2.jpeg)
+
+The result is quite disapointing and until using [ASUS Cobble SSD Enclosure｜Data Storage](https://www.asus.com/motherboards-components/data-storage/asus-product/asus-cobble-ssd-enclosure/) plus a 512G NVMe M.2 SSD.  
 
 
-#### III. Bibliography 
+#### IV. Bibliography 
 1. [Rufus](https://rufus.ie/en/)
 2. [Open-Shell](https://github.com/Open-Shell/Open-Shell-Menu)
 3. [Desktop Restore](https://www.majorgeeks.com/files/details/desktop_restore.html)
