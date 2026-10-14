@@ -1,9 +1,10 @@
-# Exporting Oracle Tables to CSV Using SQL*Plus and a Windows Batch File
+### A Practical Guide to Automated Oracle Data Extraction with SQL*Plus
 
-## A Practical Guide to Automated Oracle Data Extraction with SQL*Plus
 
-### Introduction
+#### Prologue 
 
+
+#### I. Introduction
 Oracle databases are widely used in enterprise environments, and one of the most common administrative tasks is exporting table data for reporting, backup, migration, testing, or data sharing purposes.
 
 Although Oracle provides powerful utilities such as Data Pump (`expdp` and `impdp`), there are many situations where a simple CSV export is sufficient. Examples include:
@@ -18,24 +19,23 @@ A convenient way to accomplish this is by using **SQL*Plus** together with a **W
 
 This article explains how to create a fully automated export process that:
 
-- Connects to Oracle 19c
+- Connects to Oracle
 - Generates a SQL script dynamically
 - Exports multiple tables into CSV files
 - Produces minimal console output
 - Records start and finish times
 - Requires only a single command to execute
 
----
 
-# The Complete Batch File
-
+#### II. The Complete Batch File
 The following example exports three Oracle tables:
 
-- `PFIHMD1`
-- `PFIHMD2`
-- `PFIHMD3`
+- `employees`
+- `customers`
+- `products`
 
-```bat
+`export_tables.bat`
+```
 @echo off
 
 REM === Oracle Connection ===
@@ -78,7 +78,6 @@ echo.
 echo Export started at %STARTDATE% %STARTTIME%
 
 REM === Run Export ===
-
 sqlplus -S %USERID%/%PASSWORD%@%HOST%:1521/%DB% @export_tables.sql
 
 set ENDDATE=%DATE%
@@ -89,10 +88,8 @@ echo Export completed at %ENDDATE% %ENDTIME%
 echo.
 ```
 
----
 
-# Understanding the Execution Flow
-
+#### III. Understanding the Execution Flow
 The batch file performs four major tasks:
 
 1. Set Oracle connection information
@@ -102,15 +99,13 @@ The batch file performs four major tasks:
 
 The entire process is automatic and requires only:
 
-```cmd
+```
 export_tables.bat
 ```
 
----
+**Step 1 - Define Oracle Connection Information**
 
-# Step 1 - Define Oracle Connection Information
-
-```bat
+```
 set HOST=oracle-dev-scan
 set DB=pdbdev_srv
 set USERID=dcdevdta
@@ -119,67 +114,11 @@ set PASSWORD=poonsio$da
 
 These variables contain the Oracle connection details used by SQL*Plus.
 
-## HOST
-
-```bat
-set HOST=oracle-dev-scan
-```
-
-Specifies the Oracle server host name.
-
-Examples:
-
-```bat
-set HOST=oracle-dev-scan
-set HOST=myoracle.company.com
-set HOST=192.168.1.100
-```
-
----
-
-## DB
-
-```bat
-set DB=pdbdev_srv
-```
-
-Specifies the Oracle service name.
-
-Examples:
-
-```bat
-set DB=pdbdev_srv
-set DB=ORCL
-set DB=IHPROD
-```
-
----
-
-## USERID
-
-```bat
-set USERID=dcdevdta
-```
-
-The Oracle username used to connect to the database.
-
----
-
-## PASSWORD
-
-```bat
-set PASSWORD=poonsio$da
-```
-
-The password associated with the Oracle account.
-
----
-
-# Step 2 - Dynamically Create a SQL Script
+**Step 2 - Dynamically Create a SQL Script**
 
 The following construct creates a temporary SQL script:
 
-```bat
+```
 (
 ...
 ) > export_tables.sql
@@ -196,16 +135,16 @@ SET TERMOUT OFF
 SET ECHO OFF
 SET VERIFY OFF
 
-SPOOL pfihmd1.csv
-SELECT * FROM pfihmd1;
+SPOOL employees.csv
+SELECT * FROM employees;
 SPOOL OFF
 
-SPOOL pfihmd2.csv
-SELECT * FROM pfihmd2;
+SPOOL customers.csv
+SELECT * FROM customers;
 SPOOL OFF
 
-SPOOL pfihmd3.csv
-SELECT * FROM pfihmd3;
+SPOOL products.csv
+SELECT * FROM products;
 SPOOL OFF
 
 EXIT
@@ -213,15 +152,13 @@ EXIT
 
 This approach eliminates the need to manually maintain a separate SQL file.
 
----
-
-# Step 3 - Configure SQL*Plus Output
+**Step 3 - Configure SQL*Plus Output**
 
 Several SQL*Plus settings are used to produce clean CSV files.
 
-## SET MARKUP CSV ON
+*SET MARKUP CSV ON*
 
-```sql
+```
 SET MARKUP CSV ON
 ```
 
@@ -229,7 +166,7 @@ This tells SQL*Plus to generate comma-separated values.
 
 Without this option:
 
-```text
+```
 1001 JOHN
 1002 MARY
 ```
@@ -243,27 +180,24 @@ With this option:
 
 This is the key setting that makes CSV export possible.
 
----
 
-## SET FEEDBACK OFF
+*SET FEEDBACK OFF*
 
-```sql
+```
 SET FEEDBACK OFF
 ```
 
 Suppresses messages such as:
 
-```text
+```
 125 rows selected.
 ```
 
 This prevents unwanted text from appearing in output.
 
----
+*SET HEADING OFF*
 
-## SET HEADING OFF
-
-```sql
+```
 SET HEADING OFF
 ```
 
@@ -271,7 +205,7 @@ Suppresses column names.
 
 Without it:
 
-```csv
+```
 EMPNO,ENAME
 1001,JOHN
 1002,MARY
@@ -279,24 +213,22 @@ EMPNO,ENAME
 
 With it:
 
-```csv
+```
 1001,JOHN
 1002,MARY
 ```
 
 If column headers are desired, use:
 
-```sql
+```
 SET HEADING ON
 ```
 
 instead.
 
----
+*SET PAGESIZE 0*
 
-## SET PAGESIZE 0
-
-```sql
+```
 SET PAGESIZE 0
 ```
 
@@ -304,11 +236,9 @@ Removes page breaks and report formatting.
 
 This is useful when exporting large datasets.
 
----
+*SET TERMOUT OFF*
 
-## SET TERMOUT OFF
-
-```sql
+```
 SET TERMOUT OFF
 ```
 
@@ -318,9 +248,7 @@ Without it, every exported row would scroll through the console window.
 
 Instead, data is written directly to the CSV file.
 
----
-
-## SET ECHO OFF
+*SET ECHO OFF*
 
 ```sql
 SET ECHO OFF
@@ -330,108 +258,67 @@ Suppresses SQL statement display.
 
 Without it:
 
-```text
+```
 SELECT * FROM pfihmd1;
 ```
 
 would appear during execution.
 
----
+*SET VERIFY OFF*
 
-## SET VERIFY OFF
-
-```sql
+```
 SET VERIFY OFF
 ```
 
 Suppresses substitution-variable messages and keeps execution clean.
 
----
-
-# Step 4 - Export Data Using SPOOL
+**Step 4 - Export Data Using SPOOL**
 
 SQL*Plus uses the `SPOOL` command to write output to a file.
 
----
-
-## Export PFIHMD1
+*Export employees*
 
 ```sql
-SPOOL pfihmd1.csv
+SPOOL employees.csv
 
-SELECT * FROM pfihmd1;
+SELECT * FROM employees;
 
 SPOOL OFF
 ```
 
 Execution flow:
 
-1. Open `pfihmd1.csv`
+1. Open `employees.csv`
 2. Execute the query
 3. Write rows to the file
 4. Close the file
 
 Result:
 
-```text
-pfihmd1.csv
+```
+employees.csv
 ```
 
----
+**Export Customers**
 
-## Export PFIHMD2
+**Export Products**
 
-```sql
-SPOOL pfihmd2.csv
 
-SELECT * FROM pfihmd2;
-
-SPOOL OFF
-```
-
-Result:
-
-```text
-pfihmd2.csv
-```
-
----
-
-## Export PFIHMD3
-
-```sql
-SPOOL pfihmd3.csv
-
-SELECT * FROM pfihmd3;
-
-SPOOL OFF
-```
-
-Result:
-
-```text
-pfihmd3.csv
-```
-
----
-
-# Why Create Separate CSV Files?
-
+#### IV. Why Create Separate CSV Files?
 Keeping one table per CSV file offers several benefits.
 
-## Easier Data Analysis
+**Easier Data Analysis**
 
-```text
-pfihmd1.csv
-pfihmd2.csv
-pfihmd3.csv
+```
+employees.csv
+customers.csv
+products.csv
 ```
 
 Each file contains only one dataset.
 
----
 
-## Easier Data Import
+**Easier Data Import**
 
 Most tools expect one table per file:
 
@@ -441,59 +328,34 @@ Most tools expect one table per file:
 - SQL Server Import Wizard
 - Oracle SQL Developer
 
----
-
-## Easier Troubleshooting
+**Easier Troubleshooting**
 
 If one export fails, the remaining files are unaffected.
 
----
 
-# Understanding the SQL*Plus Command
-
+#### V. Understanding the SQL*Plus Command
 The actual export is performed by:
 
-```bat
+```
 sqlplus -S %USERID%/%PASSWORD%@%HOST%:1521/%DB% @export_tables.sql
 ```
 
 After variable substitution:
 
-```bat
-sqlplus -S dcdevdta/poonsio$da@oracle-dev-scan:1521/pdbdev_srv @export_tables.sql
 ```
+sqlplus -S albertoi/mypassword@my-oracle-host:1521/mypdb @export_tables.sql
 
----
-
-# Understanding the Connection String
+```
 
 The connection format is:
 
-```text
+```
 username/password@host:port/service
 ```
 
-Example:
+**What Does the -S Option Mean?**
 
-```text
-dcdevdta/poonsio$da@oracle-dev-scan:1521/pdbdev_srv
 ```
-
-Where:
-
-| Component | Value |
-|-----------|--------|
-| Username | dcdevdta |
-| Password | poonsio$da |
-| Host | oracle-dev-scan |
-| Port | 1521 |
-| Service | pdbdev_srv |
-
----
-
-# What Does the -S Option Mean?
-
-```bat
 sqlplus -S
 ```
 
@@ -527,10 +389,8 @@ With `-S`:
 
 This creates a much cleaner experience for automation.
 
----
 
-# Recording Start and End Time
-
+#### VI. Recording Start and End Time
 Before running the export:
 
 ```bat
@@ -568,10 +428,8 @@ Export completed at Wed 10/14/2026 9:40:31.99
 
 This provides a simple execution audit trail.
 
----
 
-# Sample Execution
-
+#### VII. Sample Execution
 Running the batch file:
 
 ```cmd
@@ -590,16 +448,14 @@ Generated files:
 
 ```text
 export_tables.sql
-pfihmd1.csv
-pfihmd2.csv
-pfihmd3.csv
+employees.csv
+customers.csv
+products.csv
 ```
 
----
+**Example CSV Output**
 
-# Example CSV Output
-
-Suppose `PFIHMD1` contains:
+Suppose `employees` contains:
 
 ```text
 1001 JOHN
@@ -624,10 +480,8 @@ EMPNO,ENAME
 1003,DAVID
 ```
 
----
 
-# Improving Performance for Large Tables
-
+#### VIII. Improving Performance for Large Tables
 For tables containing hundreds of thousands or millions of rows, consider adding:
 
 ```sql
@@ -643,16 +497,14 @@ SET MARKUP CSV ON
 
 This reduces network round-trips between the Oracle client and database server and can noticeably improve export performance.
 
----
 
-# Security Considerations
-
+#### IX. Security Considerations
 Avoid storing production passwords in plain text whenever possible.
 
 Instead of:
 
 ```bat
-set PASSWORD=poonsio$da
+set PASSWORD=mypassword
 ```
 
 you may prompt the user:
@@ -663,25 +515,21 @@ set /p PASSWORD=Enter Password:
 
 or use Oracle Wallet in security-sensitive environments.
 
----
 
-# Possible Enhancements
-
+#### X. Possible Enhancements
 The solution can be extended easily.
 
-## Export Additional Tables
+**Export Additional Tables**
 
-```sql
-SPOOL customer.csv
-SELECT * FROM customer;
+```
+SPOOL orders.csv
+SELECT * FROM orders;
 SPOOL OFF
 ```
 
----
+**Export Selected Columns**
 
-## Export Selected Columns
-
-```sql
+```
 SELECT
     usrid,
     usrname,
@@ -689,30 +537,24 @@ SELECT
 FROM users;
 ```
 
----
+**Export Filtered Data**
 
-## Export Filtered Data
-
-```sql
+```
 SELECT *
 FROM users
 WHERE status = 'ACTIVE';
 ```
 
----
+**Create Daily Snapshot Files**
 
-## Create Daily Snapshot Files
-
-```sql
+```
 SPOOL customer_20261014.csv
 ```
 
 This allows historical exports to be retained.
 
----
 
-# Conclusion
-
+#### XI. Conclusion
 SQL*Plus remains one of the simplest and most reliable tools for exporting Oracle data. By combining SQL*Plus with a Windows batch file, developers and database administrators can build a lightweight, repeatable, and fully automated export process.
 
 The solution described in this article:
@@ -727,3 +569,18 @@ The solution described in this article:
 For small-to-medium export requirements, this method is often faster to implement and easier to maintain than a full Data Pump or ETL solution.
 
 Whether the goal is data migration, reporting, testing, development support, or simple archiving, SQL*Plus remains a valuable and efficient tool in every Oracle professional's toolkit.
+
+
+#### XII. Biblipgraphy 
+1. [Oracle Instant Client Downloads for Microsoft Windows (64-bit)](https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html)
+2. []()
+3. []()
+4. []()
+5. []()
+6. []()
+
+
+#### Epilogue 
+
+
+### EOF (2026/10/30)
