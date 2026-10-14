@@ -572,12 +572,9 @@ Whether the goal is data migration, reporting, testing, development support, or 
 
 
 #### XII. Biblipgraphy 
-1. [Oracle Instant Client Downloads for Microsoft Windows (64-bit)](https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html)
-2. []()
-3. []()
-4. []()
-5. []()
-6. []()
+1. [SQL*Plus Overview](https://docs.oracle.com/cd/B12037_01/server.101/b12170/ch1.htm)
+2. [Oracle Instant Client Downloads for Microsoft Windows (64-bit)](https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html)
+3. [The Book of Disquiet by Fernando Pessoa](./The%20Book%20of%20Disquiet%20-%20Fernando%20Pessoa.pdf)
 
 
 #### Epilogue 
