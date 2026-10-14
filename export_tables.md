@@ -615,7 +615,7 @@ The author provided the practical requirements, testing, validation, and domain 
 
 In that sense, the article is neither solely human-written nor solely machine-generated. It stands instead as an example of what can be achieved when human experience and artificial intelligence work side by side toward a common goal.
 
-*May your queries return rows, your scripts execute without error, your CSV files preserve every character faithfully, and your coffee remain warm until the final export completes.* ☕📄✨
+*May your queries return rows, your scripts execute without error, your CSV files preserve every character faithfully, and your coffee remain warm until the final export completes.*
 
 
 ### EOF (2026/10/30)
