@@ -1,0 +1,11 @@
+# Keep environment variables out of version control
+.env*
+
+# Ignore migration directories
+migrations/*.js
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore source directories 
+src/
