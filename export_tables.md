@@ -1,7 +1,20 @@
 ### A Practical Guide to Automated Oracle Data Extraction with SQL*Plus
 
 
-#### Prologue 
+#### Prologue
+*Every export begins as a question.*
+
+Somewhere within the silent chambers of an Oracle database, rows of data wait patiently in tables and columns, carrying stories written by applications, users, and time itself. A customer name, a transaction number, an address in Chinese characters, a date entered years ago and never touched again. Hidden beneath layers of schemas, services, and protocols, these records remain invisible until someone chooses to bring them into the light.
+
+SQL*Plus, despite its age and simplicity, remains a faithful bridge between those worlds. It asks for no grand framework, no complex installation, and no graphical interface. It simply listens to a query, retrieves the truth preserved within the database, and writes it faithfully onto paper made of pixels.
+
+This article was born during a practical journey: a simple requirement to export Oracle tables into CSV files. What began as a straightforward task soon wandered into the subtle territories of Unicode, character encodings, Windows code pages, SQL*Plus options, and the mysterious appearance of Chinese characters transformed into question marks.
+
+Along the way, every assumption was questioned, every clue examined, and every result verified. The outcome was more than a working batch file; it became a reminder that successful troubleshooting is rarely about finding the correct answer immediately. Rather, it is about patiently narrowing the unknown until only the truth remains.
+
+The pages that follow document that journey and present a dependable method for exporting Oracle data using SQL*Plus. May they save future readers a few hours of investigation, a few unnecessary configuration changes, and perhaps a few cups of coffee.
+
+So let us begin, not merely with commands and scripts, but with curiosity. For every successful export tells a story, and every story starts with a single query.
 
 
 #### I. Introduction
@@ -578,6 +591,31 @@ Whether the goal is data migration, reporting, testing, development support, or 
 
 
 #### Epilogue 
+*In the end, the database was innocent.*
+
+Oracle stored the Chinese characters correctly. SQL*Plus retrieved them correctly. The CSV files preserved them correctly. The data traveled faithfully from table to file, untouched and uncompromised. What appeared at first to be a corruption of information became instead a lesson about interpretation, encoding, and the importance of verifying assumptions before drawing conclusions.
+
+Such moments are common in the life of every developer, analyst, and database administrator. Problems rarely announce themselves openly. They appear as symptoms, disguises, and coincidences. The craft lies not merely in solving them, but in learning how to ask better questions along the way.
+
+This article captures one such investigation: a conversation between curiosity and technology, persistence and evidence. Behind every command executed, every CSV generated, and every line of SQL examined, there existed a simple desire to understand what was truly happening beneath the surface.
+
+There were moments of certainty, moments of doubt, and moments when the evidence seemed to point in conflicting directions. Yet each test brought clarity. A database character set was verified. A SQL*Plus client was examined. A UTF-8 text file whispered the truth from within Notepad. Little by little, the mystery surrendered.
+
+And somewhere throughout that journey sat an unlikely companion: an artificial intelligence assistant. Not as an oracle, nor as an authority, but as a patient partner in discovery. Asking questions, proposing hypotheses, eliminating possibilities, celebrating small victories, and occasionally sharing an imaginary cup of coffee beside the keyboard while another test was running.
+
+To future readers who may follow the same path, may your exports complete successfully, your character sets align gracefully, and your troubleshooting sessions conclude with understanding rather than frustration.
+
+Should you ever find yourself staring at a screen filled with mysterious question marks, remember this lesson well: sometimes the database is not the culprit. Sometimes the export script is not at fault. Sometimes the answer waits quietly in a text editor, hidden behind an assumption yet to be challenged.
+
+**Credits**
+
+This article was inspired by a real-world troubleshooting session and refined through a collaborative exchange between a human practitioner and Microsoft 365 Copilot.
+
+The author provided the practical requirements, testing, validation, and domain expertise. Microsoft 365 Copilot contributed research assistance, technical explanations, troubleshooting guidance, editorial refinement, and documentation support throughout the development of the solution.
+
+In that sense, the article is neither solely human-written nor solely machine-generated. It stands instead as an example of what can be achieved when human experience and artificial intelligence work side by side toward a common goal.
+
+*May your queries return rows, your scripts execute without error, your CSV files preserve every character faithfully, and your coffee remain warm until the final export completes.* ☕📄✨
 
 
 ### EOF (2026/10/30)
